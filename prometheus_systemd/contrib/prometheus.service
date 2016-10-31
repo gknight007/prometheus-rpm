@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 EnvironmentFile=/etc/prometheus/prometheus.env
-ExecStart=/usr/bin/prometheus -config.file=$CONF_FILE -web.console.libraries=$SHARE/console_libraries -web.console.templates=$SHARE/consoles -storage.local.path=$STORAGE -alertmanager.url=$ALERT_MANAGERS $OTHER_OPTS
-User=$USER 
+ExecStart=/usr/bin/prometheus -config.file=${CONF_FILE} -web.console.libraries=${SHARE}/console_libraries -web.console.templates=${SHARE}/consoles -storage.local.path=${STORAGE} -alertmanager.url=${ALERT_MANAGERS} ${OTHER_OPTS}
+User=${USER}
 
 [Install]
 WantedBy=multi-user.target
