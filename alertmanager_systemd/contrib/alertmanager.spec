@@ -51,7 +51,6 @@ chgrp alertmanager /var/run/alertmanager
 chmod 774 /var/run/alertmanager
 chown alertmanager:alertmanager /var/log/alertmanager
 chown alertmanager:alertmanager /var/lib/prometheus/alertmanager
-chmod 744 /var/log/alertmanager
 
 %files
 %defattr(-,root,root,-)
