@@ -5,8 +5,8 @@ After=network.target
 
 [Service]
 EnvironmentFile=/etc/alertmanager/alertmanager.env
-ExecStart=/usr/bin/alertmanager -config.file="$CONF" -log.format "$LOG_FORMAT" -log.level="$LOG_LEVEL" -storage.path="$STORAGE_PATH"
-User=$USER
+ExecStart=/usr/bin/alertmanager -config.file="${CONF}" -log.format "${LOG_FORMAT}" -log.level="${LOG_LEVEL}" -storage.path="${STORAGE_PATH}"
+User=alertmanager
 
 [Install]
 WantedBy=multi-user.target
