@@ -34,7 +34,7 @@ mkdir -vp $RPM_BUILD_ROOT/etc/sysconfig
 mkdir -vp $RPM_BUILD_ROOT/var/lib/prometheus/alertmanager
 
 install -m 755 contrib/alertmanager.env $RPM_BUILD_ROOT/etc/alertmanager/alertmanager.env
-install -m 755 contrib/alertmanager.init $RPM_BUILD_ROOT/usr/lib/systemd/alertmanager.service
+install -m 755 contrib/alertmanager.service $RPM_BUILD_ROOT/usr/lib/systemd/alertmanager.service
 install -m 644 contrib/alertmanager.sysconfig $RPM_BUILD_ROOT/etc/sysconfig/alertmanager
 install -m 644 contrib/alertmanager.yaml $RPM_BUILD_ROOT/etc/alertmanager/alertmanager.yaml
 install -m 755 alertmanager $RPM_BUILD_ROOT/usr/bin/alertmanager
