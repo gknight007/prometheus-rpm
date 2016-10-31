@@ -49,7 +49,6 @@ exit 0
 %post
 chgrp alertmanager /var/run/alertmanager
 chmod 774 /var/run/alertmanager
-chown alertmanager:alertmanager /var/log/alertmanager
 chown alertmanager:alertmanager /var/lib/prometheus/alertmanager
 
 %files
@@ -59,3 +58,4 @@ chown alertmanager:alertmanager /var/lib/prometheus/alertmanager
 %config(noreplace) /etc/alertmanager/alertmanager.env
 /usr/lib/systemd/system/alertmanager.service
 /var/lib/prometheus/alertmanager
+/var/run/alertmanager
