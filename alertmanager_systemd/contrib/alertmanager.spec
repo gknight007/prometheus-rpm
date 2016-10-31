@@ -58,5 +58,5 @@ chmod 744 /var/log/alertmanager
 /usr/bin/alertmanager
 %config(noreplace) /etc/alertmanager/alertmanager.yaml
 %config(noreplace) /etc/alertmanager/alertmanager.env
-/usr/lib/systemd/alertmanager.service
+/usr/lib/systemd/system/alertmanager.service
 /var/lib/prometheus/alertmanager
