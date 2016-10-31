@@ -30,12 +30,10 @@ mkdir -vp $RPM_BUILD_ROOT/var/lib/alertmanager
 mkdir -vp $RPM_BUILD_ROOT/usr/bin
 mkdir -vp $RPM_BUILD_ROOT/usr/lib/systemd/system
 mkdir -vp $RPM_BUILD_ROOT/etc/alertmanager
-mkdir -vp $RPM_BUILD_ROOT/etc/sysconfig
 mkdir -vp $RPM_BUILD_ROOT/var/lib/prometheus/alertmanager
 
 install -m 755 contrib/alertmanager.env $RPM_BUILD_ROOT/etc/alertmanager/alertmanager.env
 install -m 755 contrib/alertmanager.service $RPM_BUILD_ROOT/usr/lib/systemd/alertmanager.service
-install -m 644 contrib/alertmanager.sysconfig $RPM_BUILD_ROOT/etc/sysconfig/alertmanager
 install -m 644 contrib/alertmanager.yaml $RPM_BUILD_ROOT/etc/alertmanager/alertmanager.yaml
 install -m 755 alertmanager $RPM_BUILD_ROOT/usr/bin/alertmanager
 
@@ -59,6 +57,6 @@ chmod 744 /var/log/alertmanager
 %defattr(-,root,root,-)
 /usr/bin/alertmanager
 %config(noreplace) /etc/alertmanager/alertmanager.yaml
+%config(noreplace) /etc/alertmanager/alertmanager.env
 /usr/lib/systemd/alertmanager.service
-%config(noreplace) /etc/sysconfig/alertmanager
 /var/lib/prometheus/alertmanager
