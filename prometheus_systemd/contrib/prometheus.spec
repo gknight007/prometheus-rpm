@@ -89,7 +89,7 @@ chmod 744 /var/log/prometheus
 /usr/bin/prometheus
 /usr/bin/promtool
 %config(noreplace) /etc/prometheus/prometheus.yaml
-%config(noreplace) /etc/prometheus/prometheus/rules
+%config(noreplace) /etc/prometheus/rules
 %config(noreplace) /etc/prometheus/prometheus.env
 /usr/lib/systemd/system/prometheus.service
 /usr/share/prometheus/consoles/aws_elasticache.html
